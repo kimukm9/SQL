@@ -1,0 +1,27 @@
+-- Create an inventory list for a clothing store
+
+CREATE TABLE clothing_shop (id INTEGER PRIMARY KEY, Name TEXT, Type TEXT, quantity INTEGER, price INTEGER);
+INSERT INTO clothing_shop VALUES (1, "TShirt", "clothes", 10, 4);
+INSERT INTO clothing_shop VALUES (2, "Jeans", "clothes", 15, 75);
+INSERT INTO clothing_shop VALUES (3, "Dress_Shirt", "clothes", 25, 125);
+INSERT INTO clothing_shop VALUES (4, "Hats", "misc", 20, 30);
+INSERT INTO clothing_shop VALUES (5, "Vnecks", "clothes", 15, 7);
+INSERT INTO clothing_shop VALUES (6, "Dress_Pants", "clothes", 25, 75);
+INSERT INTO clothing_shop VALUES (7, "Belts", "misc", 20, 15);
+INSERT INTO clothing_shop VALUES (8, "Dress_Shoes", "misc", 25, 100);
+INSERT INTO clothing_shop VALUES (9, "Socks","clothes", 100, 5);
+INSERT INTO clothing_shop VALUES (10, "Sweaters", "clothes", 25, 75);
+INSERT INTO clothing_shop VALUES (11, "Jackets", "clothes", 7, 150);
+INSERT INTO clothing_shop VALUES (12, "Blazers","clothes", 20, 200);
+INSERT INTO clothing_shop VALUES (13, "Suit_Jackets","clothes", 10, 175);
+INSERT INTO clothing_shop VALUES (14, "Cufflings","misc", 30, 15);
+INSERT INTO clothing_shop VALUES (15, "Watches","misc", 20, 100);
+
+--display the database and then ordered by price.
+SELECT * FROM clothing_shop;
+SELECT * FROM clothing_shop Group BY name Order By price;
+
+--what does the store have the most in inventory
+SELECT "name","quantity" FROM clothing_shop ORDER BY "quantity" desc;
+
+
